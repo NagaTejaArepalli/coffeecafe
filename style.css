@@ -593,7 +593,6 @@ ul{
 .footer{
 	background-color: #362a1c;
     padding-top: 70px;
-    padding-bottom: 25px;
     height: auto;
 }
 .footer-col{
@@ -652,6 +651,10 @@ ul{
 	background-color: #ffffff;
 }
 .footer .copy{
+    background: #291a04;
+    position: relative;
+    bottom: 0px;
+    margin-top: 30px;
     text-align: center;
     padding: 20px;
     color: whitesmoke;
