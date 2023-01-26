@@ -16,7 +16,7 @@ header{
     z-index: 1000;
     background: rgb(249, 248, 248);
     width: 100%;
-    height: 70px;
+    height: 80px;
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -24,8 +24,7 @@ header{
     margin: 0 auto;
 }
 .logo{
-    width:60px;
-    margin-top: 8px;
+    width:80px;
 }
 nav .logo{
     display: none;
@@ -39,7 +38,7 @@ nav ul li a{
     display: block;
     margin: 0 2px;
     font-weight: 600;
-    padding: 8px 18px;
+    padding: 10px 20px;
     transition: 0.2s;
     border-radius: 30px;
     align-items: center;
@@ -113,11 +112,10 @@ nav ul li a.active{
 .banner{
     background: url(./images/banner.png);
     background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
-    position: relative;
-    top:60px;
     width: 100%;
-    height: 700px;
+    height: auto;
 }
 .banner .column{
     display: flex;
@@ -135,12 +133,11 @@ nav ul li a.active{
     font-size: 60px;
     font: bold;
     padding: 10px;
-    width: 80%;
+
 }
 .banner .column h3{
     padding: 20px;
     font-size: 40px;
-    width: 80%;
     color: rgb(255, 255, 255);
 }
 @media only screen and (max-width:1100px) {
@@ -148,6 +145,17 @@ nav ul li a.active{
         background-position: center;
         background-repeat: no-repeat;
         background-size: cover;
+    }
+    .banner .column h3{
+        font-size: 28px;
+    }
+}
+@media only screen and (max-width:830px) {
+    .banner .column h1{
+        font-size: 35px;
+    }
+    .banner .column h3{
+        font-size: 18px;
     }
 }
 @media only screen and (max-width:600px) {
@@ -157,19 +165,11 @@ nav ul li a.active{
         background-size: cover;
     }
     .banner .column h1{
-        text-align: center;
-        color: #090909;
-        font-family: 'Libre Baskerville', serif;
-        font-size: 40px;
-        font: bold;
-        padding: 10px;
-        width: 80%;
+        font-size: 30px;
     }
     .banner .column h3{
-        padding: 20px;
-        font-size: 20px;
-        width: 100%;
-        color: rgb(255, 255, 255);
+        font-size: 16px;
+
     }
 }
 /*about*/
@@ -177,6 +177,7 @@ nav ul li a.active{
     background-color: #b38f7c;
     width: 100%;
     height: auto;
+    padding-bottom: 50px;
     display: flex;
 }
 .container{
@@ -186,6 +187,7 @@ nav ul li a.active{
     justify-content: space-between;
     margin: auto;
     padding-top: 100px;
+
     height: auto;
 }
 .content-section{
@@ -204,13 +206,13 @@ nav ul li a.active{
     height:350px;
     padding: 5px;
 }
-.content-section title{
+.content-section .title h1{
     font-family: 'Libre Baskerville', serif;
     text-transform: uppercase;
-    font-size: 30px;
+    font-size: 35px;
+    font-weight: bold;
 }
-.content-section .content h3{
-    
+.content-section .content h3{ 
     margin-top: 20px;
     font-size: 26px;
 }
@@ -265,12 +267,13 @@ nav ul li a.active{
         display: block;
     }
     .image-section{
+        padding-top:0px;
         float: none;
         width:100%;
     }
     .image-section img{
         width: 80%;
-        height: 400px;
+        height: auto;
         display: block;
         margin: auto;
     }
@@ -289,14 +292,15 @@ nav ul li a.active{
     }
 }
 .menu{
-    background: #f6f4ff;
+    background: #dcd4d2;
 }
-.menu .heading{
+.menu .heading h1{
     justify-content: center;
     text-align: center;
     font-family: 'Libre Baskerville', serif;
-    font-size: 30px;
-    padding: 20px;
+    font-size: 35px;
+    font-weight: bold;
+    padding-top: 20px;
     text-transform: uppercase;
 }
 .menu .box-container{
@@ -317,7 +321,8 @@ nav ul li a.active{
     border-radius: 50px;
 }
 .menu .box-container .box h3{
-    font-size: 2rem;
+    font-family: 'Libre Baskerville', serif;
+    font-size: 1.5rem;
     color: #854949;
 }
 @media screen and (max-width:1000px) {
@@ -337,7 +342,7 @@ nav ul li a.active{
     }
     .menu .box-container .box img{
         width: 100%;
-        height: 400px;
+        height: auto;
         margin-bottom: 1rem;
         border-radius: 50px;
     }
@@ -378,43 +383,60 @@ nav ul li a.active{
     }
 }
 .gallery{
-    background-color: rgb(97, 52, 52);
+    background-color: rgb(145, 96, 96);
     color: whitesmoke;
 }
-.gallery .img{
+.gallery .sect{
+    margin:0px 20px;
+    padding: 20px;
+}
+.gallery .sect .img{
     display: grid;
     grid-template-columns: repeat(2,1fr);
     height: auto;
-    grid-gap: 20px;
-    padding: 10px;
+    grid-gap: 2rem;
+    margin-bottom: 20px;  
 }
-.gallery .img img{
+.gallery .sect .img img{
+    border-radius: 10px;
     width:100%;
     height:300px;
 }
-.gallery .head{
+.gallery .sect .head h1{
+    font-family: 'Libre Baskerville', serif;
+    text-transform: uppercase;
+    font-size: 35px;
+    font-weight: bold;
+    padding: 20px;
     text-align: center;
-    font-size: 50px;
 }
- @media (max-width:550px){
-    .gallery .img{
+ @media (max-width:770px){
+    .gallery .sect .img{
         grid-template-columns: repeat(1,1fr);
+    }
+    .gallery .sect .img img{
+        height: auto;
+
     }
  }
 .reviews{
-    background: rgb(96, 68, 60);
-    color: whitesmoke;
+    background: rgb(216, 207, 205);
+    color: rgb(46, 26, 26);
 }
 .reviews .heading{
     text-align: center;
+    font-family: 'Libre Baskerville', serif;
     text-transform: uppercase;
+    font-size: 35px;
+    font-weight: bold;
     padding-top: 20px;
-    color: #dcd3d3;
+    color: #2f0707;
 }
 .reviews .box-container{
     display: grid;
     grid-template-columns: repeat(3,1fr);
     gap: 0.2rem;
+    padding-bottom: 20px;
 }
 .reviews .box-container .box{
     text-align: center;
@@ -422,8 +444,8 @@ nav ul li a.active{
     border-radius: 0.5rem;
 }
 .reviews .box-container .box:hover{
-    background-color: #9d9696;
-    color: #090909;
+    background-color: #522525;
+    color: #dfc5c5;
     transform: translateY(-1rem);
 }
 .reviews .box-container .box img{
@@ -432,9 +454,6 @@ nav ul li a.active{
     border-radius: 50%;
 }
 @media screen and (max-width:970px){
-    .reviews{
-        top:3300px;
-    }
     .reviews .box-container{
         display: grid;
         grid-template-columns: repeat(1,1fr);
@@ -442,6 +461,14 @@ nav ul li a.active{
         padding: 70px;
     }
 }
+@media screen and (max-width:440px){
+    .reviews .box-container{
+        text-align: center;
+        padding: 5px;
+        border-radius: 0.5rem;
+    }
+}
+
 /*contact us*/
 .contact{
     min-height: 100vh;
@@ -459,7 +486,10 @@ nav ul li a.active{
     text-align: center;
 }
 .contact .content h2{
-    font-size: 36px;
+    font-family: 'Libre Baskerville', serif;
+    text-transform: uppercase;
+    font-size: 35px;
+    font-weight: bold;
     color: rgb(61, 42, 42);
 }
 .contact .content p{
@@ -508,7 +538,8 @@ nav ul li a.active{
 .contactform{
     width: 40%;
     padding: 40px;
-    background: rgb(85, 34, 34);
+    background: rgb(97, 37, 37);
+    border-radius: 20px;
 }
 .contactform h2{
     font-size: 30px;
@@ -522,17 +553,19 @@ nav ul li a.active{
 }
 .contactform .inputbox input{
     width: 100%;
-    padding: 5px 0px;
+    padding: 8px 0px;
     font-size: 16px;
     margin: 10px 0px;
     border: none;
+    border-radius: 10px;
     border-bottom: 2px solid #333;
     outline: none;
     resize: none;
 }
 .contactform .inputbox span{
     position: absolute;
-    left: 0;
+    left: 10px;
+    top:5px;
     padding: 5px 0px;
     font-size: 16px;
     margin: 10px 0px;
@@ -544,19 +577,20 @@ nav ul li a.active{
 .contactform .inputbox textarea:focus ~ span,
 .contactform .inputbox textarea:valid ~ span{
     color: #f6f4ff;
-    font-size: 12px;
-    transform: translateY(-20px);
+    font-size: 15px;
+    transform: translateY(-30px);
 }
 .contactform .inputbox input[type="submit"]{
+    align-items: center;
     width:100px;
     background: #a18888;
     color: rgb(24, 1, 1);
     border: none;
     cursor: pointer;
-    padding: 10px;
+    padding: 7px;
     font-size: 18px;
 }
-@media screen and (max-width:1000px) {
+@media screen and (max-width:950px) {
     .contact{
         min-height: 100vh;
         padding: 50px 100px;
@@ -580,7 +614,7 @@ nav ul li a.active{
     }
 }
 .containe{
-	max-width: 1170px;
+	max-width: 100%;
 	margin:auto;
 }
 .row{
@@ -592,7 +626,7 @@ ul{
 }
 .footer{
 	background-color: #362a1c;
-    padding-top: 70px;
+    padding-top: 30px;
     height: auto;
 }
 .footer-col{
